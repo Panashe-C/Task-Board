@@ -1,0 +1,160 @@
+/* Define keyframes for card animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #f8f9fa; /* Set a light background color */
+  color: #343a40; /* Set a dark text color */
+}
+
+.container {
+  padding: 20px;
+  max-width: 100%; /* Ensure container adjusts to screen size */
+}
+
+header {
+  background-color: #007bff; /* Set a primary color for the header */
+  color: #fff;
+  padding: 10px;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+.lead {
+  font-size: 1.25rem;
+}
+
+button.btn-success {
+  background-color: #28a745; /* Set a success color for the "Add Task" button */
+  border-color: #28a745;
+}
+
+button.btn-success:hover {
+  background-color: #218838;
+}
+
+.lane {
+  min-height: 60vh;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInRight 0.5s ease; /* Apply animation */
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card.task-card {
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease; /* Apply animation */
+}
+
+.card.task-card:hover {
+  cursor: grab;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.task-card.red-background {
+  background-color: #dc3545; /* Red background color */
+  color: #fff;
+}
+
+.card.task-card h5.card-title,
+.card.task-card p.card-text,
+.card.task-card p.card-text strong {
+  color: inherit; /* Use the default text color inside the card */
+}
+
+.delete-task-btn {
+  background-color: #dc3545; /* Red color for delete button */
+  border-color: #dc3545;
+}
+
+.delete-task-btn:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.modal-content {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for extra small devices (phones) */
+@media screen and (max-width: 576px) {
+  .lane {
+    min-height: 30vh;
+  }
+}
+
+/* Media query for small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+  /* Add your styles here */
+}
+
+/* Media query for medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  /* Add your styles here */
+}
+
+/* Media query for large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  /* Add your styles here */
+}
+
+/* Media query for extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Media query for wide screens (large desktops, 1440px and up) */
+@media screen and (min-width: 1440px) {
+  /* Add your styles here */
+}
+
+/* Media query for ultra wide screens (large desktops, 1920px and up) */
+@media screen and (min-width: 1920px) {
+  /* Add your styles here */
+}
+
+/* Media query for high-resolution displays (retina screens) */
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Add your styles here */
+}
